@@ -16,13 +16,15 @@ const deck = {
     let img = document.createElement("img");
     img.src = card;
     cardDiv.append(img);
+    console.log(res.data.cards[0].code);
   },
 };
+//Draws two cards from a shuffled deck
 async function partTwo() {
   await deck.init();
   await deck.shuffle();
   await deck.drawCard();
   await deck.drawCard();
-  console.log(deck);
 }
 partTwo();
+
